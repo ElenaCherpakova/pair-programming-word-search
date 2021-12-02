@@ -13,18 +13,16 @@ const wordSearch = (letters, word) => {
   }
   return false;
 };
-  
-  
+
 const transpose = function(letters) {
-  let rowArr = [];
   let resultArr = [];
   if (letters.length !== 0) {
     for (let c = 0; c < letters[0].length; c++) {
+      let rowArr = [];
       for (let r = 0; r < letters.length; r++) {
         rowArr.push(letters[r][c]);
       }
       resultArr.push(rowArr);
-      rowArr = [];
     }
     return resultArr;
   }
@@ -33,3 +31,4 @@ const transpose = function(letters) {
   
   
 module.exports = wordSearch;
+
